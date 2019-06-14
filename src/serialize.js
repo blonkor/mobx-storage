@@ -14,7 +14,7 @@ export const serialize = (config) => {
       if (store.hasOwnProperty(key)) {
         const storeValue = store[key];
 
-        if (config.ignoreKeys.includes(key)) {
+        if (config.ignoreKeys && config.ignoreKeys.includes(key)) {
           continue;
         }
 
